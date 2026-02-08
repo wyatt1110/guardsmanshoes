@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service — Guardsman®</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/crown.png" alt="Crown" class="crown-icon">
+        <span class="nav-brand-text">Guardsman</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="book.html" class="active">Book a Service</a></li>
+      </ul>
+      <div class="nav-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== BOOKING SECTION ========== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="booking-layout">
+
+        <!-- Left: Info -->
+        <div class="booking-info fade-in">
+          <h3>Services:</h3>
+
+          <h4 class="services-subhead">Shoes:</h4>
+
+          <div class="service-tier">
+            <h5>Sergeant (Tier 1):</h5>
+            <p>Clean, Saphir Creme polish and Wax Polish.</p>
+            <p class="service-price">Price = £45</p>
+          </div>
+
+          <div class="service-tier">
+            <h5>Major (Tier 2):</h5>
+            <p>Clean, Saphir Creme polish, Wax Polish, Condition &amp; Replenish. Also includes Saphir Mirror toe shine AND a free pair of Wooden Trees worth £29.99.</p>
+            <p class="service-price">Price = £95</p>
+          </div>
+
+          <h4 class="services-subhead">Suits:</h4>
+
+          <div class="service-tier">
+            <h5>Made to measure alterations</h5>
+            <p>Suit alteration costs vary depending on what needs to be altered. Estimated cost is £85 for minor alterations and £170 for major alterations. Exact price will be given after measurements.</p>
+          </div>
+
+          <div class="service-tier">
+            <h5>Made to measure suits</h5>
+            <p>Price varies on both the suit chosen from our shop and the alterations required. Estimated prices are given in the shop when you click on the suit in question.</p>
+          </div>
+
+          <div class="booking-info-box">
+            <p>All services include pickup and delivery from a location of your choice (Home/Office etc). This is within London or reasonable distance, excess of 1 hour travelling may cost extra.</p>
+            <p>For any made to measure services please choose a location you feel comfortable being measured in. If you would like to come to us, we have partnerships with hotels and offices around central London and we can arrange a private location for measurements.</p>
+          </div>
+
+          <div class="booking-info-box booking-contact-box">
+            <h5>Need Help?</h5>
+            <p><strong>Contact us:</strong></p>
+            <p><a href="mailto:info@guardsmanshoes.com">info@guardsmanshoes.com</a></p>
+            <p><a href="tel:+447930621956">+44 (0) 7930621956</a></p>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <form class="booking-form fade-in" id="bookingForm" action="https://formsubmit.co/info@guardsmanshoes.com" method="POST" enctype="multipart/form-data">
+          <!-- FormSubmit config -->
+          <input type="hidden" name="_subject" value="New Guardsman Booking Request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <div style="text-align:center;margin-bottom:30px;">
+            <img src="assets/crown.png" alt="Crown" class="crown-icon">
+            <h3 style="margin-top:12px;font-size:1.1rem;letter-spacing:0.08em;">REQUEST A BOOKING</h3>
+            <div class="gold-divider"></div>
+          </div>
+
+          <!-- Service -->
+          <div class="form-group">
+            <label for="service">Service</label>
+            <select id="service" name="Service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="Sergeant (Tier 1) — £45">Sergeant (Tier 1) — £45</option>
+              <option value="Major (Tier 2) — £95">Major (Tier 2) — £95</option>
+              <option value="Made to Measure Alterations">Made to Measure Alterations</option>
+              <option value="Made to Measure Suits">Made to Measure Suits</option>
+            </select>
+          </div>
+
+          <!-- Conditional: Alterations sub-dropdown -->
+          <div class="form-group form-conditional" id="alterationsGroup">
+            <label for="alterationType">Alteration Type</label>
+            <select id="alterationType" name="Alteration Type">
+              <option value="" disabled selected>Select alteration type</option>
+              <option value="Minor Alterations — Est. £85">Minor alterations required</option>
+              <option value="Major Alterations — Est. £170">Major alterations required</option>
+            </select>
+          </div>
+
+          <!-- Conditional: Suits sub-dropdown -->
+          <div class="form-group form-conditional" id="suitsGroup">
+            <label for="suitChoice">Choose a Suit</label>
+            <select id="suitChoice" name="Suit Choice">
+              <option value="" disabled selected>No suits currently available</option>
+            </select>
+          </div>
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Full Name" placeholder="Your full name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="your@email.com" required>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone Number" placeholder="+44 (0) 000 000 0000">
+          </div>
+
+          <!-- Preferred Date -->
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="Preferred Date">
+            <span class="form-hint">You will be contacted with timeslots on the date chosen.</span>
+          </div>
+
+          <!-- Preferred Location -->
+          <div class="form-group">
+            <label for="location">Preferred Location</label>
+            <input type="text" id="location" name="Preferred Location" placeholder="Home address, office, or preferred area">
+          </div>
+
+          <!-- Additional Details -->
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="Additional Details" placeholder="Please include extra details and special requests. You can also attach a photo of the shoes or suit below."></textarea>
+          </div>
+
+          <!-- Photo Upload -->
+          <div class="form-group">
+            <label>Photos (up to 3)</label>
+            <div class="photo-upload-area" id="photoUploadArea">
+              <input type="file" id="photoInput" name="attachment" accept="image/*" multiple style="display:none;">
+              <div class="photo-previews" id="photoPreviews"></div>
+              <button type="button" class="photo-upload-btn" id="photoUploadBtn" title="Upload photos">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <path d="M21 15l-5-5L5 21"/>
+                </svg>
+                <span>Add photos</span>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <img src="assets/crown.png" alt="Crown" class="crown-icon crown-icon-sm">
+            <span class="footer-brand-name">Guardsman®</span>
+          </div>
+          <p>Premium shoe cleaning, care kits &amp; made-to-measure suits. The royal standard in personal presentation.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="book.html">Book a Service</a>
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <p><a href="mailto:info@guardsmanshoes.com">info@guardsmanshoes.com</a></p>
+          <p><a href="tel:+447930621956">+44 (0) 7930621956</a></p>
+          <p>London, United Kingdom</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Guardsman®. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
