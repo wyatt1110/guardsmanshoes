@@ -424,6 +424,23 @@ ul {
   margin: 40px 0;
 }
 
+/* ---------- Homepage Images ---------- */
+.homepage-image-block {
+  margin: 40px 0;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  overflow: hidden;
+}
+
+.homepage-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
 /* ---------- Testimonial / Quote ---------- */
 .quote-section {
   text-align: center;
